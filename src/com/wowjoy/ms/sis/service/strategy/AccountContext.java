@@ -1,16 +1,16 @@
 package com.wowjoy.ms.sis.service.strategy;
 
-import com.wowjoy.ms.sis.service.handler.AccountHandler;
+import com.wowjoy.ms.sis.service.param.BusinessParam;
 
-public class AccountContext<T, E> {
+public class AccountContext {
 	
-	private AccountStrategy<T, E> accountStrategy;
+	private AccountStrategy accountStrategy;
 	
-	public E execute(AccountHandler<T, E> handler, T t) {
-		return accountStrategy.execute(AccountHandler<T, E> handler, t);
+	public BusinessParam execute(BusinessParam businessParam) {
+		return accountStrategy.execute(businessParam);
 	}
 	
-	public AccountContext(AccountStrategy<T, E> accountStrategy) {
+	public AccountContext(AccountStrategy accountStrategy) {
 		this.accountStrategy = accountStrategy;
 	}
 	

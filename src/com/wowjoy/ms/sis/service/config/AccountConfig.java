@@ -6,6 +6,11 @@ public class AccountConfig {
 	
 	private String tradeNo;
 
+	public AccountConfig(String mediInsureId, String tradeNo) {
+		this.mediInsureId = mediInsureId;
+		this.tradeNo = tradeNo;
+	}
+
 	public String getMediInsureId() {
 		return mediInsureId;
 	}

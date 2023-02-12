@@ -1,9 +1,9 @@
 package com.wowjoy.ms.sis.service.strategy;
 
-import com.wowjoy.ms.sis.service.handler.AccountHandler;
+import com.wowjoy.ms.sis.service.param.BusinessParam;
 
-public interface AccountStrategy<T, E> {
+public interface AccountStrategy {
 	
-	E execute(AccountHandler<T, E> handler, T t);
+	BusinessParam execute(BusinessParam businessParam);
 
 }

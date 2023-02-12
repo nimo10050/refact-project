@@ -1,7 +1,10 @@
 package com.wowjoy.ms.sis.service.component;
 
-public interface AccountComponent<T, E> {
+import com.wowjoy.ms.sis.service.param.BusinessParam;
+
+public interface AccountComponent {
 	
-	E execute(T t);
+	BusinessParam execute(BusinessParam param);
+	
 	String getTradeNo();
 }

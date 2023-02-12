@@ -14,7 +14,7 @@ public class AccountBuilder {
 		return new GzAccountMenu().addTotalAccountComponent(new GzTotalAccountComponent());
 	}
 
-	public AccountComponent<?, ?> build(AccountConfig config) {
+	public AccountComponent build(AccountConfig config) {
 		if(config.getTradeNo() == AccountConstants.TRADE_NO_3101) {
 			return new GzTotalAccountComponent();
 		}

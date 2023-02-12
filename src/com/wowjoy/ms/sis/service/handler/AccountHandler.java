@@ -1,9 +1,7 @@
 package com.wowjoy.ms.sis.service.handler;
 
 
-import com.wowjoy.ms.sis.service.component.AccountComponent;
-
-public class AccountHandler<T extends AccountComponent, E> {
+public abstract class AccountHandler<T, E> {
 		
 	public E handle(T t) {
 		
@@ -11,7 +9,7 @@ public class AccountHandler<T extends AccountComponent, E> {
 	}
 
 	private E execute(T t) {
-		return t.execute(t);;
+		return null;
 	}
 
 }

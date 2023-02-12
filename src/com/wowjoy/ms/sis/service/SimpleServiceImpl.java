@@ -1,15 +1,15 @@
 package com.wowjoy.ms.sis.service;
 
-import com.wowjoy.ms.sis.service.config.AccountConfig;
-import com.wowjoy.ms.sis.service.handler.AccountHandler;
-import com.wowjoy.ms.sis.service.strategy.XxChooseStrategy;
+import com.wowjoy.ms.sis.service.handler.GzAccountHandler;
+import com.wowjoy.ms.sis.service.strategy.AccountContext;
+import com.wowjoy.ms.sis.service.strategy.GzAccountStrategy;
 
 public class SimpleServiceImpl {
 	
 	public void service(String mediInsureId, String tradeNo) {
-		AccountConfig config = new AccountConfig();
-		AccountHandler<String, Void> handler = new XxChooseStrategy().getAccountHandler(config);
-		Void result = handler.handle("hello world", config);
+		AccountContext<String, Integer> context = new AccountContext<>(new GzAccountStrategy());
+		Integer result = context.execute(new GzAccountHandler(), "helloworld");
+		System.out.println(result);
 	}
 	
 }
